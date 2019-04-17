@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import Selm
+import Swiftz
+
+var rootDispatch: Dispatch<App.Msg>!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
+    var window:    UIWindow?
+    var wireframe: AppWireframe?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let wireframe = AppWireframe() |> tee {
+            self.wireframe = $0
+            self.window = $0.window
+            $0.showSplash()
+        }
+        rootDispatch = Runner.create(initialize: App.initialize,
+                                     update: App.update,
+                                     view: App.route(wireframe: wireframe))
+
         return true
     }
 
@@ -40,7 +51,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

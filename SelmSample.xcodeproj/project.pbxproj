@@ -8,20 +8,74 @@
 
 /* Begin PBXBuildFile section */
 		6A368C8C225AB61C0087D39A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A368C8B225AB61C0087D39A /* AppDelegate.swift */; };
-		6A368C8E225AB61C0087D39A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A368C8D225AB61C0087D39A /* ViewController.swift */; };
 		6A368C91225AB61C0087D39A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A368C8F225AB61C0087D39A /* Main.storyboard */; };
 		6A368C93225AB61E0087D39A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A368C92225AB61E0087D39A /* Assets.xcassets */; };
 		6A368C96225AB61E0087D39A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A368C94225AB61E0087D39A /* LaunchScreen.storyboard */; };
+		6A368C9F225AB7900087D39A /* Selm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A368C9E225AB7900087D39A /* Selm.framework */; };
+		6A368CA3225ABD0F0087D39A /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A368CA1225ABD0F0087D39A /* Promises.framework */; };
+		6A368CA4225ABD0F0087D39A /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A368CA2225ABD0F0087D39A /* FBLPromises.framework */; };
+		6A368CEF225B20A00087D39A /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A368CEE225B20A00087D39A /* Swiftz.framework */; };
+		6A368CF3225C14C00087D39A /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A368CF2225C14C00087D39A /* SignInView.storyboard */; };
+		6A3D9D3B2261657200D88AD5 /* EventView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3D9D3A2261657200D88AD5 /* EventView.storyboard */; };
+		CB876130070A8B68F1BD8D32 /* SignInWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876B413858DE935ADE8764 /* SignInWireframe.swift */; };
+		CB8761526E8AF2F3CCF9710F /* EventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8761E9C8681361E3E808E7 /* EventPage.swift */; };
+		CB87621C967645D6E5C57B9D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87697F7D4243F299ED298B /* App.swift */; };
+		CB8762D0B5334793509E9AD1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8765C4C462FD64C08988B8 /* Timeline.swift */; };
+		CB8764B231773A5997BD804E /* TimelinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87628A6EAE921232903062 /* TimelinePage.swift */; };
+		CB8765C2585B4E9405AB3E41 /* TimelineWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876266B0C7CD71E98BEDCE /* TimelineWireframe.swift */; };
+		CB8766460A51219727D2492C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8766EA6AB9BFB2F7AAA0EC /* SignInViewController.swift */; };
+		CB8767E1E4ACBC53F453D417 /* SigningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C34B8091D9F4D9A6A60 /* SigningState.swift */; };
+		CB8768C459FE13761A902594 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C5A7A1FEA1226063AEF /* Password.swift */; };
+		CB876ACDDDE6D2E70E81D90C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876FCC4F52B391EBD35138 /* Event.swift */; };
+		CB876B824439D7346AB0D452 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876F69B81587229595A19C /* UIAlertController+Extensions.swift */; };
+		CB876BA753C060B7DF07FFBB /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C7A6A0BD7949D720B75 /* ViewProtocol.swift */; };
+		CB876CA608E6CEEF405C150B /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87650BC0C47C2575AD4383 /* EventViewController.swift */; };
+		CB876CB03DB4F0AD289717FA /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8769330606FBD1E1847208 /* Debounce.swift */; };
+		CB876D0425EA855946FD908B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C5614EEAB56DCCFEC79 /* Username.swift */; };
+		CB876D2E02DB221B3A1B2C13 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876BAB6B85747C428FA385 /* TimelineViewController.swift */; };
+		CB876D6E5E487D8A8BA43426 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87669F2A9F86FBEE97639C /* UIViewController+Extensions.swift */; };
+		CB876E76972690B7217E4FF9 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87658DC558F7A5F5ADF818 /* SignInPage.swift */; };
+		CB876F025058D283D53D6BCA /* EventWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8769EE93677D77FEDA0D66 /* EventWireframe.swift */; };
+		CB876F2DC93AB3124AAF4145 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876B0BAA76E2ECD4FE10C0 /* Functions.swift */; };
+		CB876F83E16DEDA15F129FCD /* AppWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C06741A20E74B04D03F /* AppWireframe.swift */; };
+		CB876F8DB501119EECD05F38 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876B8BCF89D7CF9D2640B4 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A368C88225AB61C0087D39A /* SelmSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelmSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A368C8B225AB61C0087D39A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A368C8D225AB61C0087D39A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6A368C90225AB61C0087D39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A368C92225AB61E0087D39A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A368C95225AB61E0087D39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A368C97225AB61E0087D39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A368C9E225AB7900087D39A /* Selm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Selm.framework; path = Carthage/Build/iOS/Selm.framework; sourceTree = "<group>"; };
+		6A368CA1225ABD0F0087D39A /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = Carthage/Build/iOS/Promises.framework; sourceTree = "<group>"; };
+		6A368CA2225ABD0F0087D39A /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBLPromises.framework; path = Carthage/Build/iOS/FBLPromises.framework; sourceTree = "<group>"; };
+		6A368CEE225B20A00087D39A /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
+		6A368CF2225C14C00087D39A /* SignInView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInView.storyboard; sourceTree = "<group>"; };
+		6A3D9D3A2261657200D88AD5 /* EventView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventView.storyboard; sourceTree = "<group>"; };
+		CB8761E9C8681361E3E808E7 /* EventPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPage.swift; sourceTree = "<group>"; };
+		CB876266B0C7CD71E98BEDCE /* TimelineWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineWireframe.swift; sourceTree = "<group>"; };
+		CB87628A6EAE921232903062 /* TimelinePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePage.swift; sourceTree = "<group>"; };
+		CB87650BC0C47C2575AD4383 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		CB87658DC558F7A5F5ADF818 /* SignInPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
+		CB8765C4C462FD64C08988B8 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		CB87669F2A9F86FBEE97639C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		CB8766EA6AB9BFB2F7AAA0EC /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CB8769330606FBD1E1847208 /* Debounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
+		CB87697F7D4243F299ED298B /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		CB8769EE93677D77FEDA0D66 /* EventWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventWireframe.swift; sourceTree = "<group>"; };
+		CB876B0BAA76E2ECD4FE10C0 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		CB876B413858DE935ADE8764 /* SignInWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWireframe.swift; sourceTree = "<group>"; };
+		CB876B8BCF89D7CF9D2640B4 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		CB876BAB6B85747C428FA385 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		CB876C06741A20E74B04D03F /* AppWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWireframe.swift; sourceTree = "<group>"; };
+		CB876C34B8091D9F4D9A6A60 /* SigningState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningState.swift; sourceTree = "<group>"; };
+		CB876C5614EEAB56DCCFEC79 /* Username.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
+		CB876C5A7A1FEA1226063AEF /* Password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		CB876C7A6A0BD7949D720B75 /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		CB876F69B81587229595A19C /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		CB876FCC4F52B391EBD35138 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A368CA4225ABD0F0087D39A /* FBLPromises.framework in Frameworks */,
+				6A368CA3225ABD0F0087D39A /* Promises.framework in Frameworks */,
+				6A368C9F225AB7900087D39A /* Selm.framework in Frameworks */,
+				6A368CEF225B20A00087D39A /* Swiftz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6A368C8A225AB61C0087D39A /* SelmSample */,
+				6A368C9D225AB77E0087D39A /* Frameworks */,
 				6A368C89225AB61C0087D39A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,13 +114,79 @@
 			isa = PBXGroup;
 			children = (
 				6A368C8B225AB61C0087D39A /* AppDelegate.swift */,
-				6A368C8D225AB61C0087D39A /* ViewController.swift */,
 				6A368C8F225AB61C0087D39A /* Main.storyboard */,
 				6A368C92225AB61E0087D39A /* Assets.xcassets */,
 				6A368C94225AB61E0087D39A /* LaunchScreen.storyboard */,
 				6A368C97225AB61E0087D39A /* Info.plist */,
+				CB876D2CFC386E12E2C6F976 /* App */,
+				CB876CB294881EC7AC1DCE98 /* SignIn */,
+				CB876B0BAA76E2ECD4FE10C0 /* Functions.swift */,
+				CB8769330606FBD1E1847208 /* Debounce.swift */,
+				CB876F9048690F6532F20F62 /* Timeline */,
+				CB87669F2A9F86FBEE97639C /* UIViewController+Extensions.swift */,
+				CB876C7A6A0BD7949D720B75 /* ViewProtocol.swift */,
+				6A368CF2225C14C00087D39A /* SignInView.storyboard */,
+				CB876245B340161F17B88628 /* Event */,
+				6A3D9D3A2261657200D88AD5 /* EventView.storyboard */,
+				CB876F69B81587229595A19C /* UIAlertController+Extensions.swift */,
 			);
 			path = SelmSample;
+			sourceTree = "<group>";
+		};
+		6A368C9D225AB77E0087D39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A368CEE225B20A00087D39A /* Swiftz.framework */,
+				6A368CA2225ABD0F0087D39A /* FBLPromises.framework */,
+				6A368CA1225ABD0F0087D39A /* Promises.framework */,
+				6A368C9E225AB7900087D39A /* Selm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB876245B340161F17B88628 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				CB8761E9C8681361E3E808E7 /* EventPage.swift */,
+				CB8769EE93677D77FEDA0D66 /* EventWireframe.swift */,
+				CB87650BC0C47C2575AD4383 /* EventViewController.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		CB876CB294881EC7AC1DCE98 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				CB87658DC558F7A5F5ADF818 /* SignInPage.swift */,
+				CB876B413858DE935ADE8764 /* SignInWireframe.swift */,
+				CB8766EA6AB9BFB2F7AAA0EC /* SignInViewController.swift */,
+				CB876C5614EEAB56DCCFEC79 /* Username.swift */,
+				CB876C5A7A1FEA1226063AEF /* Password.swift */,
+				CB876B8BCF89D7CF9D2640B4 /* AccessToken.swift */,
+				CB876C34B8091D9F4D9A6A60 /* SigningState.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		CB876D2CFC386E12E2C6F976 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CB87697F7D4243F299ED298B /* App.swift */,
+				CB876C06741A20E74B04D03F /* AppWireframe.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CB876F9048690F6532F20F62 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				CB87628A6EAE921232903062 /* TimelinePage.swift */,
+				CB876266B0C7CD71E98BEDCE /* TimelineWireframe.swift */,
+				CB876BAB6B85747C428FA385 /* TimelineViewController.swift */,
+				CB8765C4C462FD64C08988B8 /* Timeline.swift */,
+				CB876FCC4F52B391EBD35138 /* Event.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +199,7 @@
 				6A368C84225AB61C0087D39A /* Sources */,
 				6A368C85225AB61C0087D39A /* Frameworks */,
 				6A368C86225AB61C0087D39A /* Resources */,
+				6A368CA0225AB7970087D39A /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -125,18 +251,66 @@
 				6A368C96225AB61E0087D39A /* LaunchScreen.storyboard in Resources */,
 				6A368C93225AB61E0087D39A /* Assets.xcassets in Resources */,
 				6A368C91225AB61C0087D39A /* Main.storyboard in Resources */,
+				6A368CF3225C14C00087D39A /* SignInView.storyboard in Resources */,
+				6A3D9D3B2261657200D88AD5 /* EventView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A368CA0225AB7970087D39A /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Selm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBLPromises.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Promises.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swiftz.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A368C84225AB61C0087D39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A368C8E225AB61C0087D39A /* ViewController.swift in Sources */,
 				6A368C8C225AB61C0087D39A /* AppDelegate.swift in Sources */,
+				CB87621C967645D6E5C57B9D /* App.swift in Sources */,
+				CB876E76972690B7217E4FF9 /* SignInPage.swift in Sources */,
+				CB876F2DC93AB3124AAF4145 /* Functions.swift in Sources */,
+				CB876F83E16DEDA15F129FCD /* AppWireframe.swift in Sources */,
+				CB876130070A8B68F1BD8D32 /* SignInWireframe.swift in Sources */,
+				CB8766460A51219727D2492C /* SignInViewController.swift in Sources */,
+				CB876CB03DB4F0AD289717FA /* Debounce.swift in Sources */,
+				CB876D0425EA855946FD908B /* Username.swift in Sources */,
+				CB8768C459FE13761A902594 /* Password.swift in Sources */,
+				CB8764B231773A5997BD804E /* TimelinePage.swift in Sources */,
+				CB8765C2585B4E9405AB3E41 /* TimelineWireframe.swift in Sources */,
+				CB876D2E02DB221B3A1B2C13 /* TimelineViewController.swift in Sources */,
+				CB876D6E5E487D8A8BA43426 /* UIViewController+Extensions.swift in Sources */,
+				CB8762D0B5334793509E9AD1 /* Timeline.swift in Sources */,
+				CB876ACDDDE6D2E70E81D90C /* Event.swift in Sources */,
+				CB876BA753C060B7DF07FFBB /* ViewProtocol.swift in Sources */,
+				CB876F8DB501119EECD05F38 /* AccessToken.swift in Sources */,
+				CB8761526E8AF2F3CCF9710F /* EventPage.swift in Sources */,
+				CB876F025058D283D53D6BCA /* EventWireframe.swift in Sources */,
+				CB876CA608E6CEEF405C150B /* EventViewController.swift in Sources */,
+				CB876B824439D7346AB0D452 /* UIAlertController+Extensions.swift in Sources */,
+				CB8767E1E4ACBC53F453D417 /* SigningState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +458,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV6DJ2NMCD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SelmSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +480,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV6DJ2NMCD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SelmSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
