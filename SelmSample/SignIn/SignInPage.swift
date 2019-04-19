@@ -15,10 +15,6 @@ struct SignInPage {
         var password:     Password     = Password("")
         var errorMessage: String?
 
-        let signingDependsOn      = dependsOn(SigningState.self)
-        let canSignInDependsOn    = dependsOn(SigningState.self, Username.self, Password.self)
-        let showingErrorDependsOn = dependsOn(String?.self)
-
         static func ==(lhs: Model, rhs: Model) -> Bool {
             if lhs.signingState != rhs.signingState { return false }
             if lhs.username != rhs.username { return false }
@@ -91,10 +87,9 @@ struct SignInPage {
         return { model, dispatch in
             view.dispatch = dispatch
 
-            model.signingDependsOn(model.signingState, view.setShowsIndicator • SigningState.isSigning)
-            model.canSignInDependsOn(model.signingState, model.username, model.password,
-                                     view.setEnabledToSignInButton • canSignIn)
-            model.showingErrorDependsOn(model.errorMessage, view.showErrorMessage |> unwrap)
+            dependsOn(\Model.signingState, model, view.setShowsIndicator • SigningState.isSigning)
+            dependsOn(\Model.signingState, \Model.username, \Model.password, model, view.setEnabledToSignInButton • canSignIn)
+            dependsOn(\Model.errorMessage, model, view.showErrorMessage |> unwrap)
         }
     }
 }

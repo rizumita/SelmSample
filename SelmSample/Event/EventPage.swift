@@ -13,9 +13,6 @@ struct EventPage {
         var event:        Event
         var isViewLoaded: Bool
 
-        let eventNameDependsOn    = dependsOn(String.self)
-        let isViewLoadedDependsOn = dependsOn(Bool.self)
-
         static func ==(lhs: Model, rhs: Model) -> Bool {
             if lhs.event != rhs.event { return false }
             if lhs.isViewLoaded != rhs.isViewLoaded { return false }
@@ -71,7 +68,7 @@ struct EventPage {
         return { model, dispatch in
             guard model.isViewLoaded, !view.hasBacked else { return }
 
-            model.eventNameDependsOn(model.event.name, view.setEventName)
+            dependsOn((\Model.event).appending(path: \Event.name), model, view.setEventName)
         }
     }
 }

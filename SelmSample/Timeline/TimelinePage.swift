@@ -14,7 +14,6 @@ struct TimelinePage {
         var timeline           = Timeline(events: [])
         var eventPageModel: EventPage.Model?
         var reloadsTimeline    = false
-        let reloadingDependsOn = dependsOn(Bool.self)
 
         init(accessToken: AccessToken) { self.accessToken = accessToken }
 
@@ -115,7 +114,7 @@ struct TimelinePage {
         return { model, dispatch in
             guard view.isViewLoaded && !view.hasBacked else { return }
 
-            model.reloadingDependsOn(model.reloadsTimeline) { reloads in
+            dependsOn(\Model.reloadsTimeline, model) { reloads in
                 view.messages = model.timeline.events
                 view.reload()
             }

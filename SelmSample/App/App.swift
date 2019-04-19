@@ -11,8 +11,6 @@ struct App {
     struct Model {
         var signInPageModel:   SignInPage.Model?   = .none
         var timelinePageModel: TimelinePage.Model? = .none
-
-        let routingDependsOn = dependsOn(SignInPage.Model?.self, TimelinePage.Model?.self)
     }
 
     enum Msg {
@@ -70,12 +68,10 @@ struct App {
 
     static func route<Wireframe: AppWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
         return { model, dispatch in
-            model.routingDependsOn(model.signInPageModel, model.timelinePageModel) { sipModel, tlpModel in
-                if let sipModel = sipModel {
-                    SignInPage.route(wireframe: wireframe.signInWireframe)(sipModel, dispatch • Msg.signInPageMsg)
-                } else if let tlpModel = tlpModel {
-                    TimelinePage.route(wireframe: wireframe.timelineWireframe)(tlpModel, dispatch • Msg.timelinePageMsg)
-                }
+            if let sipModel = model.signInPageModel {
+                SignInPage.route(wireframe: wireframe.signInWireframe)(sipModel, dispatch • Msg.signInPageMsg)
+            } else if let tlpModel = model.timelinePageModel {
+                TimelinePage.route(wireframe: wireframe.timelineWireframe)(tlpModel, dispatch • Msg.timelinePageMsg)
             }
         }
     }
