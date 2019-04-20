@@ -76,17 +76,9 @@ struct SignInPage {
         }
     }
 
-    static func route<Wireframe: SignInWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
+    static func view<Wireframe: SignInWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
         return { model, dispatch in
             let view = wireframe.showView(dispatch: dispatch)
-            self.view(view)(model, dispatch)
-        }
-    }
-
-    static func view<View: SignInViewProtocol>(_ view: View) -> SelmView<Msg, Model> {
-        return { model, dispatch in
-            view.dispatch = dispatch
-
             dependsOn(\Model.signingState, model, view.setShowsIndicator • SigningState.isSigning)
             dependsOn(\Model.signingState, \Model.username, \Model.password, model, view.setEnabledToSignInButton • canSignIn)
             dependsOn(\Model.errorMessage, model, view.showErrorMessage |> unwrap)

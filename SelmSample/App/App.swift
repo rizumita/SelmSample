@@ -66,12 +66,12 @@ struct App {
         }
     }
 
-    static func route<Wireframe: AppWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
+    static func view<Wireframe: AppWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
         return { model, dispatch in
             if let sipModel = model.signInPageModel {
-                SignInPage.route(wireframe: wireframe.signInWireframe)(sipModel, dispatch • Msg.signInPageMsg)
+                SignInPage.view(wireframe: wireframe.signInWireframe)(sipModel, dispatch • Msg.signInPageMsg)
             } else if let tlpModel = model.timelinePageModel {
-                TimelinePage.route(wireframe: wireframe.timelineWireframe)(tlpModel, dispatch • Msg.timelinePageMsg)
+                TimelinePage.view(wireframe: wireframe.timelineWireframe)(tlpModel, dispatch • Msg.timelinePageMsg)
             }
         }
     }
