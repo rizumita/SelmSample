@@ -57,15 +57,9 @@ struct EventPage {
         }
     }
 
-    static func route<Wireframe: EventWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
+    static func view<Wireframe: EventWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
         return { model, dispatch in
             let view = wireframe.showView(dispatch: dispatch)
-            self.view(view)(model, dispatch)
-        }
-    }
-
-    static func view<View: EventViewProtocol>(_ view: View) -> SelmView<Msg, Model> {
-        return { model, dispatch in
             guard model.isViewLoaded, !view.hasBacked else { return }
 
             dependsOn((\Model.event).appending(path: \Event.name), model, view.setEventName)

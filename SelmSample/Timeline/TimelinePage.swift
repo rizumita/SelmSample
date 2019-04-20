@@ -99,25 +99,18 @@ struct TimelinePage {
         }
     }
 
-    static func route<Wireframe: TimelineWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
+    static func view<Wireframe: TimelineWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
         return { model, dispatch in
             let view = wireframe.showView(dispatch: dispatch)
-            self.view(view)(model, dispatch)
-
-            if let m = model.eventPageModel {
-                EventPage.route(wireframe: wireframe.eventWireframe)(m, dispatch • Msg.eventPageMsg)
-            }
-        }
-    }
-
-    static func view<View: TimelineViewProtocol>(_ view: View) -> SelmView<Msg, Model> {
-        return { model, dispatch in
             guard view.isViewLoaded && !view.hasBacked else { return }
 
             dependsOn(\Model.reloadsTimeline, model) { reloads in
                 view.messages = model.timeline.events
                 view.reload()
             }
+
+            model.eventPageModel
+            |> unwrap { m in EventPage.view(wireframe: wireframe.eventWireframe)(m, dispatch • Msg.eventPageMsg) }
         }
     }
 }

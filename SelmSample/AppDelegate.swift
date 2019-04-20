@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         rootDispatch = Runner.create(initialize: App.initialize,
                                      update: App.update,
-                                     view: App.route(wireframe: wireframe))
+                                     view: App.view(wireframe: wireframe))
 
         return true
     }
