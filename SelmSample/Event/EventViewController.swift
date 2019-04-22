@@ -9,27 +9,17 @@
 import UIKit
 import Selm
 
-protocol EventViewProtocol: ViewProtocol {
-    var dispatch: Dispatch<EventPage.Msg>! { get set }
-
+protocol EventViewProtocol: LifecycleViewProtocol {
     func setEventName(_ name: String)
 }
 
 class EventViewController: UIViewController {
-    var dispatch: Dispatch<EventPage.Msg>!
+    var dispatch: Dispatch<EventPage.Msg>?
 
     @IBOutlet weak var nameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        dispatch(.viewDidLoad)
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-        if hasBacked { dispatch(.dismissed) }
     }
 
     deinit {
@@ -37,7 +27,7 @@ class EventViewController: UIViewController {
     }
 
     @IBAction func changeNameButtonTapped(_ sender: Any) {
-        dispatch(.inputEventName(UIAlertController.prompt(presenter: self)))
+        dispatch?(.inputEventName(UIAlertController.prompt(presenter: self)))
     }
 }
 

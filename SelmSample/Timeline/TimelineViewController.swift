@@ -3,13 +3,13 @@
 //  SelmSample
 //
 //  Created by 和泉田 領一 on 2019-04-08.
-//  Copyright © 2019 CAPH TECH. All rights reserved.
+//  Copyright © 2019 CAPH TECH. All rights reserved.@objc
 //
 
 import UIKit
 import Selm
 
-protocol TimelineViewProtocol: ViewProtocol {
+protocol TimelineViewProtocol: LifecycleViewProtocol {
     var dispatch: Dispatch<TimelinePage.Msg>! { get set }
 
     var messages: [Event] { get set }
