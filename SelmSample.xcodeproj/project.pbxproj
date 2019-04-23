@@ -28,12 +28,10 @@
 		CB8768C459FE13761A902594 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C5A7A1FEA1226063AEF /* Password.swift */; };
 		CB876ACDDDE6D2E70E81D90C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876FCC4F52B391EBD35138 /* Event.swift */; };
 		CB876B824439D7346AB0D452 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876F69B81587229595A19C /* UIAlertController+Extensions.swift */; };
-		CB876BA753C060B7DF07FFBB /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C7A6A0BD7949D720B75 /* ViewProtocol.swift */; };
 		CB876CA608E6CEEF405C150B /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87650BC0C47C2575AD4383 /* EventViewController.swift */; };
 		CB876CB03DB4F0AD289717FA /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8769330606FBD1E1847208 /* Debounce.swift */; };
 		CB876D0425EA855946FD908B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876C5614EEAB56DCCFEC79 /* Username.swift */; };
 		CB876D2E02DB221B3A1B2C13 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876BAB6B85747C428FA385 /* TimelineViewController.swift */; };
-		CB876D6E5E487D8A8BA43426 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87669F2A9F86FBEE97639C /* UIViewController+Extensions.swift */; };
 		CB876E76972690B7217E4FF9 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87658DC558F7A5F5ADF818 /* SignInPage.swift */; };
 		CB876F025058D283D53D6BCA /* EventWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8769EE93677D77FEDA0D66 /* EventWireframe.swift */; };
 		CB876F2DC93AB3124AAF4145 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876B0BAA76E2ECD4FE10C0 /* Functions.swift */; };
@@ -60,7 +58,6 @@
 		CB87650BC0C47C2575AD4383 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		CB87658DC558F7A5F5ADF818 /* SignInPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		CB8765C4C462FD64C08988B8 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		CB87669F2A9F86FBEE97639C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CB8766EA6AB9BFB2F7AAA0EC /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CB8769330606FBD1E1847208 /* Debounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
 		CB87697F7D4243F299ED298B /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 		CB876C34B8091D9F4D9A6A60 /* SigningState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningState.swift; sourceTree = "<group>"; };
 		CB876C5614EEAB56DCCFEC79 /* Username.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 		CB876C5A7A1FEA1226063AEF /* Password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
-		CB876C7A6A0BD7949D720B75 /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		CB876F69B81587229595A19C /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		CB876FCC4F52B391EBD35138 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,8 +119,6 @@
 				CB876B0BAA76E2ECD4FE10C0 /* Functions.swift */,
 				CB8769330606FBD1E1847208 /* Debounce.swift */,
 				CB876F9048690F6532F20F62 /* Timeline */,
-				CB87669F2A9F86FBEE97639C /* UIViewController+Extensions.swift */,
-				CB876C7A6A0BD7949D720B75 /* ViewProtocol.swift */,
 				6A368CF2225C14C00087D39A /* SignInView.storyboard */,
 				CB876245B340161F17B88628 /* Event */,
 				6A3D9D3A2261657200D88AD5 /* EventView.storyboard */,
@@ -301,10 +295,8 @@
 				CB8764B231773A5997BD804E /* TimelinePage.swift in Sources */,
 				CB8765C2585B4E9405AB3E41 /* TimelineWireframe.swift in Sources */,
 				CB876D2E02DB221B3A1B2C13 /* TimelineViewController.swift in Sources */,
-				CB876D6E5E487D8A8BA43426 /* UIViewController+Extensions.swift in Sources */,
 				CB8762D0B5334793509E9AD1 /* Timeline.swift in Sources */,
 				CB876ACDDDE6D2E70E81D90C /* Event.swift in Sources */,
-				CB876BA753C060B7DF07FFBB /* ViewProtocol.swift in Sources */,
 				CB876F8DB501119EECD05F38 /* AccessToken.swift in Sources */,
 				CB8761526E8AF2F3CCF9710F /* EventPage.swift in Sources */,
 				CB876F025058D283D53D6BCA /* EventWireframe.swift in Sources */,

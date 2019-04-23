@@ -6,9 +6,7 @@
 import UIKit
 import Selm
 
-protocol EventWireframeProtocol {
-    associatedtype View: EventViewProtocol
-
+protocol EventWireframeProtocol: LifecycleWireframeProtocol where View: EventViewProtocol {
     func showView(dispatch: @escaping Dispatch<EventPage.Msg>) -> View
 }
 
@@ -26,6 +24,7 @@ class EventWireframe: EventWireframeProtocol {
                 else { fatalError("Unable to instantiate EventViewController") }
             controller.dispatch = dispatch
             viewController = controller
+            observeLifecycle(viewController: controller, dispatch: dispatch)
             parent?.navigationController?.pushViewController(controller, animated: true)
 
             return controller

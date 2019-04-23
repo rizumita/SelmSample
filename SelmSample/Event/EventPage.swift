@@ -20,20 +20,24 @@ struct EventPage {
         }
     }
 
-    enum Msg {
+    enum Msg: LifecycleMsgProtocol {
         case viewDidLoad
         case inputEventName(() -> Promise<String?>)
         case updateEventName(String)
-        case dismissed
+        case dismiss
+
+        static var loadedMsg:     Msg? { return .viewDidLoad }
+        static var dismissingMsg: Msg? { return .dismiss }
     }
 
     enum ExternalMsg {
         case noOp
         case eventUpdated(Event)
-        case dismissed
+        case dismiss
     }
 
     static func initialize(event: Event) -> SelmInited<Msg, Model> {
+        clearDependsOn(Model.self)
         return (Model(event: event, isViewLoaded: false), Cmd.none)
     }
 
@@ -52,15 +56,15 @@ struct EventPage {
             let newModel         = model |> set(eventNameKeyPath, name)
             return (newModel, Cmd.none, .eventUpdated(newModel.event))
 
-        case .dismissed:
-            return (model, Cmd.none, .dismissed)
+        case .dismiss:
+            return (model, Cmd.none, .dismiss)
         }
     }
 
     static func view<Wireframe: EventWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
         return { model, dispatch in
             let view = wireframe.showView(dispatch: dispatch)
-            guard model.isViewLoaded, !view.hasBacked else { return }
+            guard model.isViewLoaded, !view.isAboutToClose else { return }
 
             dependsOn((\Model.event).appending(path: \Event.name), model, view.setEventName)
         }

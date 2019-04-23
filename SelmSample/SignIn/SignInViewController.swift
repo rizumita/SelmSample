@@ -10,7 +10,7 @@ import UIKit
 import Swiftz
 import Selm
 
-protocol SignInViewProtocol: ViewProtocol {
+protocol SignInViewProtocol: LifecycleViewProtocol {
     var dispatch: Dispatch<SignInPage.Msg>! { get set }
 
     func setEnabledToSignInButton(_ enabled: Bool)

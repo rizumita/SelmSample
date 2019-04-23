@@ -66,7 +66,7 @@ struct TimelinePage {
                                         cmd.map(Msg.eventPageMsg)]),
                         .noOp)
 
-            case .dismissed:
+            case .dismiss:
                 return (model |> set(\Model.eventPageModel, .none),
                         Cmd.none,
                         .noOp)
@@ -102,7 +102,7 @@ struct TimelinePage {
     static func view<Wireframe: TimelineWireframeProtocol>(wireframe: Wireframe) -> SelmView<Msg, Model> {
         return { model, dispatch in
             let view = wireframe.showView(dispatch: dispatch)
-            guard view.isViewLoaded && !view.hasBacked else { return }
+//            guard view.isViewLoaded && !view.hasBacked else { return }
 
             dependsOn(\Model.reloadsTimeline, model) { reloads in
                 view.messages = model.timeline.events
